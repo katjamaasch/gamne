@@ -170,9 +170,10 @@ class Game {
   loop() {
     if (this.newBear.yPosition > canvas.height) {
       alert("Game over");
-      //break;
+      game.loop();
     } else if (this.newBear.score === 100) {
       alert("You won!");
+      game.loop();
     }
 
     if (Math.random() < 0.03) {
